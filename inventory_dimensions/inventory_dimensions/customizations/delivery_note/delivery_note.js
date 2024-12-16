@@ -16,7 +16,7 @@ frappe.ui.form.on("Delivery Note Item", {
               cdt,
               cdn,
               "custom_shelf_qty",
-              r.message[0]["total"]
+             0
             );
           }
         },
