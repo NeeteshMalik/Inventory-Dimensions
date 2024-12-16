@@ -27,7 +27,9 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+	"Delivery Note": "inventory_dimensions/customizations/delivery_note/delivery_note.js"
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -83,6 +85,7 @@ app_license = "MIT"
 # To clean up dependencies/integrations with other apps
 # Name of the app being uninstalled is passed as an argument
 
+after_migrate = "inventory_dimensions.migrate.after_migrate"
 # before_app_uninstall = "inventory_dimensions.utils.before_app_uninstall"
 # after_app_uninstall = "inventory_dimensions.utils.after_app_uninstall"
 
