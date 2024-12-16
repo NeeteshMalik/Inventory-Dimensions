@@ -1,7 +1,8 @@
 import frappe
 
 from inventory_dimensions.inventory_dimensions.customizations.delivery_note.api_calls.api_call_functions import (
-	get_shelf_qty)
+	get_shelf_qty,
+)
 
 
 @frappe.whitelist()
