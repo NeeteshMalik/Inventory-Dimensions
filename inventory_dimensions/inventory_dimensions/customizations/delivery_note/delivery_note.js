@@ -11,8 +11,6 @@ frappe.ui.form.on("Delivery Note Item", {
           shelf: row.shelf,
         },
         callback: function (r) {
-          console.log(r.message);
-          console.log(r.message["total"]);
           if (r.message) {
             frappe.model.set_value(
               cdt,
