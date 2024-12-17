@@ -15,5 +15,5 @@ def _get_rack_list(item_code, warehouse):
 
 
 @frappe.whitelist()
-def _get_shelf_list(item_code, warehouse):
-	return get_shelf_list(item_code, warehouse)
+def _get_shelf_list(item_code, warehouse,rack):
+	return get_shelf_list(item_code, warehouse,rack)

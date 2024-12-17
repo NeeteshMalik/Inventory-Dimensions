@@ -10,12 +10,13 @@ frappe.ui.form.on("Delivery Note Item", {
 					shelf: row.shelf,
 				},
 				callback: function (r) {
+					console.log(r.message[0].total)
 					if (r.message) {
 						frappe.model.set_value(
 							cdt,
 							cdn,
 							"custom_shelf_qty",
-							r.message[0]["total"]
+							r.message[0].total
 						);
 					}
 				},
@@ -65,6 +66,7 @@ function shelf_filter_query(frm) {
 			args: {
 				item_code: d.item_code,
 				warehouse: d.warehouse,
+				rack:d.rack
 			},
 			callback(r) {
 				shelf_filter = r.message;

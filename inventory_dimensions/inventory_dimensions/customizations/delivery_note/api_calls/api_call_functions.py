@@ -27,11 +27,11 @@ def get_rack_list(item_code, warehouse):
 	return final_list
 
 
-def get_shelf_list(item_code, warehouse):
+def get_shelf_list(item_code, warehouse,rack):
 	final_list = []
 	shelf_qty = frappe.get_all(
 		"Stock Ledger Entry",
-		filters={"item_code": item_code, "warehouse": warehouse},
+		filters={"item_code": item_code, "warehouse": warehouse,"rack":rack},
 		group_by="shelf",
 		fields=["sum(actual_qty) as total", "shelf"],
 	)
