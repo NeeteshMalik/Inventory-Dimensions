@@ -28,7 +28,11 @@ app_license = "MIT"
 
 # include js in doctype views
 doctype_js = {
-	"Delivery Note": "inventory_dimensions/customizations/delivery_note/delivery_note.js"
+	"Delivery Note": "inventory_dimensions/customizations/delivery_note/delivery_note.js",
+	"Sales Invoice": "inventory_dimensions/customizations/sales_invoice/sales_invoice.js",
+	"Stock Entry": "inventory_dimensions/customizations/stock_entry/stock_entry.js",
+	"Purchase Receipt": "inventory_dimensions/customizations/purchase_receipt/purchase_receipt.js",
+	"Shelf": "inventory_dimensions/customizations/shelf/shelf.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}

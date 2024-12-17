@@ -1,4 +1,4 @@
-frappe.ui.form.on("Delivery Note Item", {
+frappe.ui.form.on("Sales Invoice Item", {
 	shelf: function (frm, cdt, cdn) {
 		let row = locals[cdt][cdn];
 		if (row.warehouse && row.item_code && row.shelf) {
@@ -37,8 +37,16 @@ frappe.ui.form.on("Delivery Note Item", {
 			frappe.model.set_value(cdt, cdn, "shelf", null);
 		}
 	},
+	// Uncomment if explicit validation for shelf selection is needed
+	// shelf: function (frm, cdt, cdn) {
+	//     const row = locals[cdt][cdn];
+	//     if (!row.rack) {
+	//         frappe.msgprint(__('Please select a Rack before selecting a Shelf.'));
+	//         frappe.model.set_value(cdt, cdn, "shelf", null);
+	//     }
+	// }
 });
-frappe.ui.form.on("Delivery Note", {
+frappe.ui.form.on("Sales Invoice", {
 	refresh: function (frm) {
 		rack_filter_query(frm);
 		shelf_filter_query(frm);
