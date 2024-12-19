@@ -72,6 +72,13 @@ frappe.ui.form.on("Sales Invoice", {
 			};
 		};
 	},
+	validate(frm) {
+		frm.doc.items.forEach(row => {
+			if (row.custom_shelf_qty && row.qty > row.custom_shelf_qty) {
+				frappe.throw('Row ${row.idx}: Qty cannot be greater than Shelf Qty.');
+			}
+		});
+	},
 });
 
 function rack_filter_query(frm) {
