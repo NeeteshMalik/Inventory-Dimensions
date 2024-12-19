@@ -115,9 +115,9 @@ after_migrate = "inventory_dimensions.migrate.after_migrate"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Stock Entry": "inventory_dimensions.inventory_dimensions.customizations.stock_entry.stock_entry.OverideStockEntry"
+}
 
 # Document Events
 # ---------------
